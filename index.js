@@ -4,14 +4,21 @@ f =  function(min,max,nb_attempts){
     console.log(rint);
     var i=0;
     res = prompt(`Guess a number between ${min} and ${max}. You've got ${nb_attempts} attempts.`);
+    console.log(res);
+    while(isNaN(res)|| res === ""){
+        res = prompt(`Enter a valid number!`);
+    }
     while(i<nb_attempts && res!=rint){
         if(rint<res){
         alert(`Try again . Number of  attempts left = ${nb_attempts-i}\nPs: Your number is bigger!`);
         }
         else  {alert(`Try again . Number of  attempts left = ${nb_attempts-i}\nPs: Your number is smaller!`);}
+            i++;
 
-        res = prompt(`Guess a number between${min} and ${max}`);
-        i++;
+        res = prompt(`Guess a number between ${min} and ${max}. You've got ${nb_attempts} attempts.`);
+        while(isNaN(res)|| res === ""){
+            res = prompt(`Enter a valid number`);
+        }        
     }
     if(res == rint)
         alert("Great Job!");
