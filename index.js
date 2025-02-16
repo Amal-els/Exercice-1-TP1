@@ -1,7 +1,6 @@
 f =  function(min,max,nb_attempts){
     let x = Math.random();
     let rint = Math.floor(x*(max-min+1))+min;
-    console.log(rint);
     var i=0;
     res = prompt(`Guess a number between ${min} and ${max}. You've got ${nb_attempts} attempts.`);
     while(isNaN(res)|| res === ""){
