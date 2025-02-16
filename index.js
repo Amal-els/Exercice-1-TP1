@@ -13,7 +13,7 @@ f =  function(min,max,nb_attempts){
         }
         else  {alert(`Try again . Number of  attempts left = ${nb_attempts-i}\nNB: Your number is smaller!`);}
         
-        res = prompt(`Guess a number between ${min} and ${max}. You've got ${nb_attempts} attempts.`);
+        res = prompt(`Guess a number between ${min} and ${max}.`);
         while(isNaN(res)|| res === ""){
             res = prompt(`Enter a valid number`);
         }        
