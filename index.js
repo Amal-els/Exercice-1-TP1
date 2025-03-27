@@ -9,7 +9,7 @@ function jouer(min,max,nb_attempts){
     alert(`You've got ${nb_attempts} attempts. Use them wisely!`);
     let x = Math.random();
     let rint = Math.floor(x*(max-min+1))+min;
-    var i=0;
+    let i=0;
     let n = gettingNumber(min,max);
     while(i<nb_attempts-1 && n!=rint){
         i++;
@@ -23,7 +23,7 @@ function jouer(min,max,nb_attempts){
         alert("Great Job!");
     else 
         alert(`Better Luck next time :( \nThe actual number was ${rint}`);
-    var c= confirm("Want to play again ?");
+    let c= confirm("Want to play again ?");
     if(c){
         jouer(min,max,nb_attempts);
     }
@@ -38,6 +38,7 @@ int.addEventListener("click", ()=>jouer(1,50,5)
 dif= document.querySelector("button.difficil");
 dif.addEventListener("click", ()=>jouer(1,100,5)
 );
+
 
 
 
